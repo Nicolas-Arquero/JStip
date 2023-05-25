@@ -1,143 +1,179 @@
-// Manipulation du DOM
+/*************************
+ * Variables et Types de données
+ *************************/
 
-// Sélectionner un élément par son ID
-const elementById = document.getElementById("elementId");
+// Déclaration de variables
+var x; // Déclaration d'une variable sans valeur initiale
+var y = 5; // Déclaration d'une variable avec une valeur initiale
 
-// Sélectionner un élément par sa classe
-const elementsByClass = document.getElementsByClassName("className");
+// Types de données
+var number = 5; // Nombre
+var string = "Hello"; // Chaîne de caractères
+var boolean = true; // Booléen (true/false)
+var array = [1, 2, 3]; // Tableau
+var object = { key: "value" }; // Objet
 
-// Sélectionner un élément par son nom de balise
-const elementsByTag = document.getElementsByTagName("tagName");
+/*************************
+ * Opérations et Opérateurs
+ *************************/
 
-// Sélectionner le premier élément correspondant à un sélecteur CSS
-const firstElement = document.querySelector("selector");
+// Opérations mathématiques
+var addition = 2 + 3;
+var soustraction = 5 - 2;
+var multiplication = 3 * 4;
+var division = 10 / 2;
+var modulo = 7 % 3;
 
-// Sélectionner tous les éléments correspondant à un sélecteur CSS
-const allElements = document.querySelectorAll("selector");
+// Opérateurs de comparaison
+var egalite = 5 == "5"; // Vérifie l'égalité des valeurs (true)
+var egaliteStricte = 5 === "5"; // Vérifie l'égalité des valeurs et des types (false)
+var difference = 5 != "5"; // Vérifie la différence des valeurs (false)
+var differenceStricte = 5 !== "5"; // Vérifie la différence des valeurs et des types (true)
+var superieur = 5 > 3;
+var inferieur = 5 < 3;
+var superieurOuEgal = 5 >= 3;
+var inferieurOuEgal = 5 <= 3;
 
-// Manipulation des classes CSS d'un élément
-// Ajouter une classe à un élément
-element.classList.add("className");
+// Opérateurs logiques
+var et = true && false; // ET logique (false)
+var ou = true || false; // OU logique (true)
+var non = !true; // NON logique (false)
 
-// Supprimer une classe d'un élément
-element.classList.remove("className");
+/*************************
+ * Structures de contrôle
+ *************************/
 
-// Vérifier si un élément a une classe spécifique
-const hasClass = element.classList.contains("className");
-
-// Manipulation des attributs d'un élément
-// Récupérer la valeur d'un attribut
-const value = element.getAttribute("attribute");
-
-// Définir la valeur d'un attribut
-element.setAttribute("attribute", "value");
-
-// Supprimer un attribut d'un élément
-element.removeAttribute("attribute");
-
-// Événements
-// Ajouter un écouteur d'événement à un élément
-element.addEventListener("event", function (event) {
-  // Gestionnaire d'événement
-});
-
-// Supprimer un écouteur d'événement d'un élément
-element.removeEventListener("event", eventHandler);
-
-// Manipulation des styles CSS d'un élément
-// Récupérer la valeur d'une propriété CSS
-const propertyValue = element.style.property;
-
-// Définir la valeur d'une propriété CSS
-element.style.property = "value";
-
-// Manipulation des tableaux
-// Créer un nouveau tableau
-const array = [];
-
-// Ajouter un élément à la fin du tableau
-array.push(element);
-
-// Supprimer le dernier élément du tableau
-const lastElement = array.pop();
-
-// Ajouter un élément au début du tableau
-array.unshift(element);
-
-// Supprimer le premier élément du tableau
-const firstElement = array.shift();
-
-// Vérifier si un élément existe dans le tableau
-const isInArray = array.includes(element);
-
-// Obtenir l'index d'un élément dans le tableau
-const index = array.indexOf(element);
-
-// Supprimer un élément à un index spécifique
-array.splice(index, 1);
-
-// Manipulation des chaînes de caractères
-// Concaténer des chaînes de caractères
-const concatenatedString = string1 + string2;
-
-// Obtenir la longueur d'une chaîne de caractères
-const length = string.length;
-
-// Extraire une sous-chaîne de caractères
-const subString = string.slice(startIndex, endIndex);
-
-// Remplacer une partie d'une chaîne de caractères
-const newString = string.replace("oldValue", "newValue");
-
-// Convertir une chaîne de caractères en minuscules
-const lowerCaseString = string.toLowerCase();
-
-// Convertir une chaîne de caractères en majuscules
-const upperCaseString = string.toUpperCase();
-
-// Structures de contrôle
-// Condition "if"
+// Conditions
 if (condition) {
-  // Bloc de code à exécuter si la condition est vraie
+  // Bloc de code exécuté si la condition est vraie
+} else if (autreCondition) {
+  // Bloc de code exécuté si une autre condition est vraie
 } else {
-  // Bloc de code à exécuter si la condition est fausse
+  // Bloc de code exécuté si aucune condition n'est vraie
 }
 
-// Boucle "for"
-for (let i = 0; i < array.length; i++) {
-  // Bloc de code à exécuter à chaque itération
+// Boucle for
+for (var i = 0; i < 5; i++) {
+  // Bloc de code exécuté tant que la condition est vraie
 }
 
-// Boucle "while"
+// Boucle while
 while (condition) {
-  // Bloc de code à exécuter tant que la condition est vraie
+  // Bloc de code exécuté tant que la condition est vraie
 }
 
-// Fonctions
+// Boucle do-while
+do {
+  // Bloc de code exécuté au moins une fois, puis tant que la condition est vraie
+} while (condition);
+
+/*************************
+ * Fonctions
+ *************************/
+
 // Déclaration d'une fonction
-function functionName(parameter1, parameter2) {
-  // Bloc de code à exécuter
-  return result; // Facultatif, renvoie une valeur
+function nomDeLaFonction(parametre1, parametre2) {
+  // Bloc de code exécuté lorsque la fonction est appelée
 }
 
 // Appel d'une fonction
-const result = functionName(argument1, argument2);
+nomDeLaFonction(arg1, arg2);
 
-// Objets
-// Créer un nouvel objet
-const object = {};
+// Fonction avec retour de valeur
+function fonctionAvecRetour() {
+  return valeur;
+}
 
-// Ajouter une propriété à un objet
-object.property = value;
+// Utilisation de fonctions prédéfinies
+var longueur = "Hello".length; // Retourne la longueur de la chaîne de caractères
 
-// Accéder à la valeur d'une propriété d'un objet
-const propertyValue = object.property;
+/*************************
+ * Manipulation du DOM
+ *************************/
 
-// Modifier la valeur d'une propriété d'un objet
-object.property = newValue;
+// Sélection d'éléments
+var element = document.getElementById("id"); // Sélectionne un élément par son ID
+var elements = document.getElementsByClassName("classe"); // Sélectionne des éléments par leur classe
+var elements = document.getElementsByTagName("tag"); // Sélectionne des éléments par leur balise
 
-// Supprimer une propriété d'un objet
-delete object.property;
+// Modification de contenu
+element.innerHTML = "Nouveau contenu"; // Modifie le contenu HTML d'un élément
+element.textContent = "Nouveau contenu"; // Modifie le texte d'un élément
 
-// Vérifier si une propriété existe dans un objet
-const hasProperty = "property" in object;
+// Ajout/Suppression de classes
+element.classList.add("classe"); // Ajoute une classe à un élément
+element.classList.remove("classe"); // Supprime une classe d'un élément
+
+// Événements
+element.addEventListener("click", function () {
+  // Fonction exécutée lors du clic sur l'élément
+});
+
+/*************************
+ * Manipulation de tableaux
+ *************************/
+
+// Création d'un tableau
+var tableau = [];
+
+// Ajout d'éléments à un tableau
+tableau.push(element); // Ajoute un élément à la fin du tableau
+
+// Accès aux éléments d'un tableau
+var premierElement = tableau[0]; // Accède au premier élément du tableau
+
+// Parcours d'un tableau
+for (var i = 0; i < tableau.length; i++) {
+  var element = tableau[i];
+  // Faire quelque chose avec l'élément
+}
+
+/*************************
+ * Manipulation d'objets
+ *************************/
+
+// Création d'un objet
+var objet = {};
+
+// Ajout de propriétés à un objet
+objet.propriete = valeur;
+
+// Accès aux propriétés d'un objet
+var valeur = objet.propriete;
+
+/*************************
+ * Gestion des erreurs
+ *************************/
+
+try {
+  // Bloc de code susceptible de générer une erreur
+} catch (erreur) {
+  // Bloc de code exécuté en cas d'erreur
+}
+
+/*************************
+ * Requêtes HTTP (AJAX)
+ *************************/
+
+// Envoi d'une requête GET
+var xhr = new XMLHttpRequest();
+xhr.open("GET", "url", true);
+xhr.onreadystatechange = function () {
+  if (xhr.readyState === 4 && xhr.status === 200) {
+    var reponse = xhr.responseText;
+    // Faire quelque chose avec la réponse
+  }
+};
+xhr.send();
+
+// Envoi d'une requête POST
+var xhr = new XMLHttpRequest();
+xhr.open("POST", "url", true);
+xhr.setRequestHeader("Content-Type", "application/json");
+xhr.onreadystatechange = function () {
+  if (xhr.readyState === 4 && xhr.status === 200) {
+    var reponse = xhr.responseText;
+    // Faire quelque chose avec la réponse
+  }
+};
+xhr.send(JSON.stringify(data));
